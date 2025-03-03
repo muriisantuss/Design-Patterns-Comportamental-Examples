@@ -7,5 +7,5 @@
 
 ### Código
 
-- [Chain of Responsibility](./src/ChainofResponsibility/Main.java)
+- [Chain of Responsibility](./src/ChainOfResponsibility/Main.java)
 - [Command](./src/Command/Main.java)
