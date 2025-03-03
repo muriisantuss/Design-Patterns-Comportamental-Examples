@@ -12,13 +12,15 @@ O padrão Command propõe criar uma classe para cada comando, encapsulando sua e
 
 # Exemplo de Código
 
+#### Interface Command
 ```java
-// Interface Command
 interface Command {
     void execute();
 }
+```
 
-// Comandos concretos
+#### Comandos concretos
+```java
 class CopyCommand implements Command {
     public void execute() {
         System.out.println("Copiar texto");
@@ -30,8 +32,10 @@ class PasteCommand implements Command {
         System.out.println("Colar texto");
     }
 }
+```
 
-// Invocador que aciona os comandos
+#### Invocador que aciona os comandos
+```java
 class Editor {
     private Command command;
 
@@ -45,8 +49,10 @@ class Editor {
         }
     }
 }
+```
 
-// Uso
+#### Uso
+```java
 public class Main {
     public static void main(String[] args) {
         Editor editor = new Editor();
@@ -59,3 +65,5 @@ public class Main {
     }
 }
 ```
+
+---

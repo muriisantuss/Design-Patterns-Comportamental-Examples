@@ -1,5 +1,3 @@
-## Chain of Responsibility
-
 # O que é
 
 O Chain of Responsibility é um padrão de projeto comportamental que permite passar uma requisição por uma cadeia de manipuladores até que um deles a processe. Isso evita dependências explícitas entre remetente e receptor.
@@ -14,8 +12,8 @@ Com Chain of Responsibility, cada manipulador decide se pode processar a requisi
 
 # Exemplo de Código
 
+#### Classe base para os manipuladores
 ```java
-// Classe base para os manipuladores
 abstract class Handler {
     protected Handler nextHandler;
 
@@ -29,8 +27,10 @@ abstract class Handler {
         }
     }
 }
+```
 
-// Manipuladores concretos
+#### Manipuladores concretos
+```java
 class Atendente extends Handler {
     public void handleRequest(String request) {
         if (request.equals("simples")) {
@@ -56,8 +56,10 @@ class Gerente extends Handler {
         System.out.println("Gerente resolveu o problema");
     }
 }
+```
 
-// Uso
+#### Uso
+```java
 public class Main {
     public static void main(String[] args) {
         Handler atendente = new Atendente();
@@ -73,3 +75,5 @@ public class Main {
     }
 }
 ```
+
+
